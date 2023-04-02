@@ -40,3 +40,53 @@
 .account{
     font-size: 14px;
 }
+
+/* homepage image animation css */
+.swing {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    float:left;
+}
+.swing img {
+    display: block;
+}
+.swing:after{
+    content: '';
+    position: absolute;  
+    width: 20px; height: 20px;  
+    border: 1px solid #999;
+    top: -10px; left: 50%;
+    z-index: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+/* nail */
+.swing:before{
+    content: '';
+    position: absolute;
+    width: 5px; height: 5px;
+    top: -14px;left: 54%;
+    z-index: 5;
+    border-radius: 50% 50%;
+    background: #000;
+}
+ 
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+/* Apply styles for small screens */
+@media only screen and (max-width: 600px) {
+    .homepage {
+        margin-left: 5px;
+        margin-right: 100px; 
+    }
+    .home-image {
+        margin-right: 90px;
+    }
+    .right-grid{
+        margin-top: 5px;
+        margin-left: 30px;
+    }
+  }
