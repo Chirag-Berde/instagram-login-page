@@ -1,3 +1,4 @@
+
 .right-grid {
     width: 400px;
     height: 80%;
@@ -95,10 +96,16 @@
 }
 
 /* Apply styles for small screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
     .homepage {
         margin-left: 5px;
         margin-right: 100px;
+    }
+
+    .homepage img{
+        height: 100%;
+        width: 100%;
+        margin-left: 46px;
     }
 
     .home-image {
@@ -106,13 +113,29 @@
     }
 
     .right-grid {
-        margin-top: 5px;
-        margin-left: 30px;
+        width: 352px;
+        height: 80%;
+        margin-top: 75px;
+        margin: 0 auto;
+    }
+    .right-grid span{
+       display: none;
+    }
+    .facebook-login{
+        text-align: center;
+    }
+    .facebook-login .login,.facebook-login .password{
+        margin-left: 0;
     }
 }
 /* Apply styles for tablet  */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1199px) {
     .right-grid {
         margin: 0 auto;
+    }
+    .homepage img{
+        height: 100%;
+        width: 100%;
+        margin-left: 0;
     }
 }
